@@ -18,8 +18,8 @@ namespace TardySvc
         protected override void OnStart(string[] args)
         {
             if (!(args.Length > 0 && int.TryParse(args[0], out timeout)))
-                // Default to 1½ minute timeout
-                timeout = 90 * 1000;
+                // Default to 3 minute timeout
+                timeout = 180 * 1000;
 
             // Set maximum timeout of 5 minutes
             timeout = Math.Min(timeout, 300 * 1000);
@@ -28,6 +28,7 @@ namespace TardySvc
                 EventLog.CreateEventSource(serviceName, "Application");
 
             EventLog.WriteEntry(serviceName, String.Format("Starting {0} with {1}ms timeout", serviceName, timeout), EventLogEntryType.Information);
+            Thread.Sleep(timeout);
         }
 
         protected override void OnStop()

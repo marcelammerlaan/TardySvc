@@ -1,0 +1,9 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/TardySvc/bin/Debug/TardySvc.exe
+*.pdb
+/TardySvc/bin/Debug/TardySvc.exe.config
+/TardySvc/obj/Debug

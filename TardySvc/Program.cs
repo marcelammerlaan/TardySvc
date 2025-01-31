@@ -5,6 +5,7 @@ using System.ServiceProcess;
 using System.Text;
 using System.Threading.Tasks;
 
+// sc create tardysvc binPath="C:\Users\xxx\source\repos\TardySvc\TardySvc\bin\Debug\TardySvc.exe"
 namespace TardySvc
 {
     static class Program
